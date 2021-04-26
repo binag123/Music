@@ -53,4 +53,9 @@ function handleFinishLoading(setLoadingComplete) {
   setLoadingComplete(true);
 }
 
-
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#eef2ed',
+  },
+});
