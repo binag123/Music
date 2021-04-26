@@ -8,7 +8,7 @@ import LinksScreen from '../screens/LinksScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 import AlbumScreen from '../screens/AlbumScreen'
 import AlbumDetailScreen from '../screens/AlbumDetailScreen'
-
+import StorageScreen from '../screens/StorageScreen'
 import FavoriteScreen from '../screens/FavoriteScreen';
 
 const config = Platform.select({
@@ -49,6 +49,15 @@ const LinksStack = createStackNavigator(
   config
 );
 
+LinksStack.path = '';
+
+const SettingsStack = createStackNavigator(
+  {
+    Settings: SettingsScreen,
+    Storage:StorageScreen
+  },
+  config
+);
 LinksStack.navigationOptions = {
   tabBarLabel: 'Links',
   tabBarIcon: ({ focused }) => (
